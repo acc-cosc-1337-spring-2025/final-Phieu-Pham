@@ -17,7 +17,7 @@ TEST_CASE("Verify Die Rolls Return Values Between 1 and 6") {
     }
 }
 
-/*TEST_CASE("Verify Roll Class Rolls Two Dice and Returns Valid Sum") {
+TEST_CASE("Verify Roll Class Rolls Two Dice and Returns Valid Sum") {
     Die die1;
     Die die2;
     Roll roll(die1, die2);
@@ -29,4 +29,4 @@ TEST_CASE("Verify Die Rolls Return Values Between 1 and 6") {
         REQUIRE(roll_result >= 2); // Minimum possible roll (1+1)
         REQUIRE(roll_result <= 12); // Maximum possible roll (6+6)
     }
-}*/
+}
