@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "die.h"
 #include "roll.h"
+#include "shooter.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -29,4 +30,16 @@ TEST_CASE("Verify Roll Class Rolls Two Dice and Returns Valid Sum") {
         REQUIRE(roll_result >= 2); // Minimum possible roll (1+1)
         REQUIRE(roll_result <= 12); // Maximum possible roll (6+6)
     }
+}
+
+TEST_CASE("Verify Shooter Throws Dice") {
+    Die die1;
+    Die die2;
+    Shooter shooter;
+
+    Roll* roll = shooter.throw_dice(die1, die2);
+    
+    int roll_value = roll->roll_value();
+    REQUIRE(roll_value >= 2);
+    REQUIRE(roll_value <= 12);
 }
