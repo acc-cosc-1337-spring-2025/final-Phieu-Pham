@@ -6,7 +6,7 @@
 #include "come_out_phase.h"
 #include "point_phase.h"
 
-/*TEST_CASE("Verify Test Configuration", "verification") {
+TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
@@ -44,7 +44,7 @@ TEST_CASE("Verify Shooter Throws Dice") {
     int roll_value = roll->roll_value();
     REQUIRE(roll_value >= 2);
     REQUIRE(roll_value <= 12);
-}*/
+}
 
 TEST_CASE("Verify ComeOutPhase get_outcome returns natural, craps, and point") {
     Die die1, die2;
